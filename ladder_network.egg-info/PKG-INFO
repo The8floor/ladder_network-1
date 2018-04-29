@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ladder-network
+Version: 0.2
+Summary: An implementation of the Ladder Network for semi-supervised learning
+Home-page: https://github.com/aboyker/ladder_net
+Author: Alexandre Boyker
+Author-email: aboyker@hotmail.fr
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
