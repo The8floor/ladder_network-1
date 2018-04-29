@@ -9,10 +9,12 @@ TensorFlow >= 1.0.0
 `pip install ladder_network`
 ## Usage
 
-### Training and testing on MNIST data
+### Training and validation on MNIST data
 ```python
 from ladder_network.ladder import LadderNet
 from ladder_network.helper import get_MNIST_data
+import numpy as np
+import matplotlib.pyplot as plt
 
 # number of labeled data points you wish to use from the MNIST data set
 n_labelled = 100
@@ -33,10 +35,13 @@ param = {'batch_size':batch_size, 'num_epochs':20}
 model = LadderNet(**param)
 model.train(X_l, X_u, y_l, y_u)
 
-model.predict
+# prediction and validation
+
+predictions = model.predict(X_u)
+plot_confusion_matrix(np.argmax(y_u,1), predictions, list(range(y_u[0].size)))
+plt.show()
 
 ```
-### Validation on MNIST data
 
 ## Source
 * [Semi-Supervised Learning with Ladder Networks](https://arxiv.org/abs/1507.02672)
