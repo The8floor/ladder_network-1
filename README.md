@@ -12,7 +12,7 @@ TensorFlow >= 1.0.0
 ### Training and validation on MNIST data
 ```python
 from ladder_network.ladder import LadderNet
-from ladder_network.helper import get_MNIST_data
+from ladder_network.helper import get_MNIST_data, plot_confusion_matrix
 import numpy as np
 import matplotlib.pyplot as plt
 
